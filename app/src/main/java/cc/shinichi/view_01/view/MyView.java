@@ -37,7 +37,10 @@ public class MyView extends View {
 	@Override protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 
-		paint.setStyle(Paint.Style.STROKE);
+		paint.setStyle(Paint.Style.STROKE);// 绘制的类型：填充、描边、填充+描边
+		paint.setStrokeWidth(2);// 描边的宽度
+		paint.setAntiAlias(true);// 是否开启抗锯齿：true开启；false关闭
+		paint.setDither(true);
 		paint.setColor(Color.parseColor("#27A0C9"));
 		canvas.drawCircle(100, 100, 100, paint);
 	}
